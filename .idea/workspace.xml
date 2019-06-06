@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8156e7e-0fd3-4df3-9ee7-c30cb8e3540c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/assets/js/apiRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/apiRequest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/test/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/test/test.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,20 +18,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/assets/test/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+            <state relative-caret-position="238">
+              <caret line="14" column="68" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assets/js/apiRequest.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="544">
               <caret line="32" column="56" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assets/html/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -52,8 +62,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/README.md" />
         <option value="$PROJECT_DIR$/src/assets/js/GETapiRequest.js" />
-        <option value="$PROJECT_DIR$/src/assets/test/test.html" />
         <option value="$PROJECT_DIR$/src/assets/js/apiRequest.js" />
+        <option value="$PROJECT_DIR$/src/assets/html/index.html" />
+        <option value="$PROJECT_DIR$/src/assets/test/test.html" />
       </list>
     </option>
   </component>
@@ -146,12 +157,12 @@
       <option name="presentableId" value="Default" />
       <updated>1559792406564</updated>
       <workItem from="1559792407940" duration="8904000" />
-      <workItem from="1559805796699" duration="3947000" />
+      <workItem from="1559805796699" duration="5312000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12851000" />
+    <option name="totallyTimeSpent" value="14216000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -193,17 +204,24 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/js/GETapiRequest.js" />
-    <entry file="file://$PROJECT_DIR$/src/assets/test/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/js/apiRequest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="56" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/test/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="68" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
         </state>
       </provider>
     </entry>
