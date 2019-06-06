@@ -25,10 +25,12 @@ function apiResponse(method, endpoint, key, parameters, callback) {
                 // データ受信完了
                 if (request.status == 200) {
                     var response_data = this.response;
+                    // keyが空の場合の処理
                     if (key === '') {
                         console.log("Complete!! Received in JSON format.\n");
                         console.log(response_data);
                         callback(response_data);
+                    // keyに値が設定されている時の処理
                     } else {
                         console.log("Complete!! Received in JSON format.\n");
                         console.log(response_data[key]);
