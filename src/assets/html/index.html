@@ -61,13 +61,13 @@
         const release_id = el['release_id'];
         const url = baseUrl + 'detail/' + company_id + '/' + release_id;
         apiResponse('GET', url, 'data', null, function (response_data) {
-          let title = response_data['title']
+          let title = response_data['title'];
           if (title.length > 36) {
             title = title.slice(0, 36) + '...';
           }
           let src = response_data['main_image'];
           if (response_data['animation_image1'] !== '') {
-            src = response_data['animation_image1']
+            src = response_data['animation_image1'];
           } else if (response_data['image1'] !== '') {
             src = response_data['image1'];
           }
@@ -86,8 +86,8 @@
       const h1 = document.createElement('h1');
 
       img.src = src;
-      h1.textContent = title
-      a.href = url
+      h1.textContent = title;
+      a.href = url;
 
       a.appendChild(img);
       a.appendChild(h1);

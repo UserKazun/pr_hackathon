@@ -10,7 +10,7 @@
     var red = '\u001b[31m';
 
 
-    apiResponse('GET', 'https://9b199e13.prtimes.tech/list/1', 'data', null, function (response_data) {
+    apiResponse('GET', 'https://9b199e13.prtimes.tech/date_period/2018-12-31/2019-12-31/1', 'data', null, function (response_data) {
         console.log("response_data.company_id: " + red + response_data[0].company_name);
         console.log("response_data.title: " + red + response_data[0].title);
         console.log("response_data.main_image: " + red + response_data.main_image);
