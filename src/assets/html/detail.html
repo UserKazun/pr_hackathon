@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://kit.fontawesome.com/489a3753bf.js"></script>
   <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/apiRequest.js"></script>
   <title>記事タイトル｜POP TIMES</title>
 </head>
 
@@ -72,6 +73,52 @@
       <small class="copyright">&copy; POP TIMES</small>
     </div>
   </footer>
+  <script>
+    const baseUrl = 'https://9b199e13.prtimes.tech/';
+    const company_id = '36952';
+    const release_id = '8';
+    const url = `${baseUrl}detail/${company_id}/${release_id}`;
+
+    apiResponse('GET', url, null, function (response_data) {
+      const mainImage = response_data['main_image'];
+      const title = response_data['title'];
+      const subtitle = response_data['subtitle'];
+      const desc = response_data['desc'];
+      let images = [];
+      let i = 1;
+      while (response_data[`image${i}`] !== '') {
+        images.add(response_data[i]);
+        i++;
+      }
+
+      createEntry(mainImage, images, title, subtitle, desc);
+    });
+
+    function createEntry(mainImage, images, title, subtitle, desc) {
+      const entry = document.querySelector('section.entry');
+      const entryInfo = document.querySelector('section.entry__info');
+      const img = document.querySelector('img.entry__thumb');
+      const ul = document.querySelector('ul.entry__images');
+      const h1 = document.querySelector('h1.title');
+      h1.textContent = title;
+      h1.dataset.subtitle = subtitle;
+      img.src = mainImage;
+      img.alt = title;
+      images.forEach(el => {
+        const li = document.createElement('li');
+        const img = document.createElement('img');
+        img.src = el;
+        img.alt = title;
+        ul.appendChild(li);
+      });
+      if (desc !== '') {
+        const p = document.createElement('p');
+        p.textContent = desc;
+        p.classList.add('entry__desc');
+        entryInfo.appendChild(p);
+      }
+    }
+  </script>
 </body>
 
 </html>
