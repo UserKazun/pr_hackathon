@@ -140,13 +140,13 @@ q:before {
 
 
 /* common */
-.container {
-  width: calc(100% - 16px);
-  max-width: 960px;
-  margin: 0 auto;
+:root {
+  --main-color: hsl(214, 66%, 47%);
+  --light-gray: #f0f0f0;
 }
+/* header */
 .header {
-  background: hsl(214, 66%, 47%);
+  background: var(--main-color);
 }
 .header h1 {
   font-size: 24px;
@@ -157,11 +157,18 @@ q:before {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  transition: .2s;
+}
+.header h1 a:hover {
+  opacity: .8;
 }
 
 /* nav */
 .nav {
   background: #f0f0f0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 .nav ul {
   display: flex;
@@ -169,7 +176,7 @@ q:before {
   padding: 16px 8px;
 }
 .nav ul li {
-  border: 1px solid hsl(214, 66%, 47%);
+  border: 1px solid var(--main-color);
   border-radius: 1em;
   overflow: hidden;
   min-width: 100px;
@@ -178,13 +185,14 @@ q:before {
 .nav ul li a {
   text-decoration: none;
   display: block;
-  color: hsl(214, 66%, 47%);
+  color: var(--main-color);
   line-height: 2;
   padding: 0 .5em;
   text-align: center;
+  background: white;
 }
 .nav ul li a:hover {
-  background: hsl(214, 66%, 47%);
+  background: var(--main-color);
   color: white;
   transition: .2s;
 }
@@ -207,23 +215,29 @@ q:before {
   text-decoration: none;
   color: black;
   position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.32);
 }
 .tile__item img {
   display: block;
+  width: 100%;
+  transition: .5s;
 }
 .tile__item h1 {
   position: absolute;
-  bottom: 8px;
-  left: 8px;
+  box-sizing: border-box;
+  bottom: 0;
   opacity: 0;
+  background: rgba(255, 255, 255, 0.8);
+  padding: .5em;
 }
 .tile__item:hover h1 {
   transition: .3s;
   opacity: 1;
 }
 .tile__item:hover img {
-  transition: .3s;
   opacity: 0.8;
+  transform: scale(1.1);
 }
 
 /* entry */
@@ -276,10 +290,9 @@ q:before {
   font-size: 16px;
   text-align: center;
   text-decoration: none;
-  background: hsl(214, 66%, 47%);
+  background: var(--main-color);
   color: white;
 }
-
 /* comment */
 .comment {
   background: #f0f0f0;
@@ -300,7 +313,7 @@ q:before {
 .comment__form button {
   width: 4em;
   border: none;
-  background: hsl(214, 66%, 47%);
+  background: var(--main-color);
   color: white;
 }
 .comment__form button:hover {
@@ -356,7 +369,6 @@ q:before {
     opacity: 1;
     font-size: 12px;
     line-height: 1.25em;
-    height: 1.25em;
     overflow: hidden;
   }
 }
