@@ -61,10 +61,15 @@
         const release_id = el['release_id'];
         const url = baseUrl + 'detail/' + company_id + '/' + release_id;
         apiResponse('GET', url, 'data', null, function (response_data) {
-          const title = response_data['title']
-          const src = response_data['main_image'];
-          if (!response_data['image1']) {
-            const src = response_data['image1'];
+          let title = response_data['title']
+          if (title.length > 36) {
+            title = title.slice(0, 36) + '...';
+          }
+          let src = response_data['main_image'];
+          if (response_data['animation_image1'] !== '') {
+            src = response_data['animation_image1']
+          } else if (response_data['image1'] !== '') {
+            src = response_data['image1'];
           }
 
           const article = createArticle(title, src);
@@ -74,7 +79,7 @@
       });
     });
 
-    function createArticle(title, src) {
+    function createArticle(title, src, url) {
       const article = document.createElement('article');
       const a = document.createElement('a');
       const img = document.createElement('img');
@@ -82,6 +87,7 @@
 
       img.src = src;
       h1.textContent = title
+      a.href = url
 
       a.appendChild(img);
       a.appendChild(h1);

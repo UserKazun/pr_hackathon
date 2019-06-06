@@ -216,7 +216,7 @@ q:before {
   color: black;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.32);
 }
 .tile__item img {
   display: block;
