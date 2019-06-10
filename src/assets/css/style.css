@@ -144,6 +144,11 @@ q:before {
   --main-color: hsl(214, 66%, 47%);
   --light-gray: #f0f0f0;
 }
+.container {
+  width: calc(100% - 16px);
+  max-width: 960px;
+  margin: 0 auto;
+}
 /* header */
 .header {
   background: var(--main-color);
@@ -324,13 +329,13 @@ q:before {
   padding: 16px 0;
 }
 .comment__list li {
-  display: flex;
   padding: 16px 8px;
   color: #333;
   border-bottom: 1px solid white;
 }
 .comment__user {
-  margin-right: 8px;
+  margin-bottom: 4px;
+  color: hsl(214, 66%, 23%);
 }
 .comment__list li:first-child {
   border-top: 1px solid white;
